@@ -1,0 +1,25 @@
+웹 앱 사이트 스터디
+web Front-End)
+1. html
+2. css
+3. javascript
+
+Web Back-End)
+1. python
+2. DB(Postgres)
+3. Framework(Flask)
+
+Mobile Front-End)
+1. javascript
+2. react native
+
+Mobile Back-End)
+1. python
+2. DB(Postgres)
+3. Framework(Flask)
+
+각각 1달씩, on-line(강좌 + 튜토리얼)
+
+개발하지 않고 쉽게 개발할수 있도록 지원하는 툴 사용.
+Clientless : 카페24, 가비아, WIK
+Serverless : AWS, Firebase
