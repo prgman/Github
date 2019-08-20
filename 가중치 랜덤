@@ -29,7 +29,7 @@ for($i=0;$i<1000;$i++) {
 
 
 
-로또..
+로또..java
 public void makeNum() {
 lotNum = new int[7]; 
 for(int i=0; i<7; i++) {
@@ -38,3 +38,11 @@ for(int j=0; j<i; j++) {
 if(lotNum[i] == lotNum[j]) {//중복제거
 lotNum[i] = (int) (Math.random()*45) +1;
 j = 0;
+
+로또 python
+import random
+num = input("게임수: ")
+for i in range(0, int(num)):
+lotto = random.sample(range(1,46),6)
+lotto.sort()
+print(lotto)
