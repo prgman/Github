@@ -46,3 +46,16 @@ for i in range(0, int(num)):
 lotto = random.sample(range(1,46),6)
 lotto.sort()
 print(lotto)
+
+로또 중복 python
+import random
+
+numbers = list(range(1,46))
+lotto = []
+
+while len(lotto) < 6:
+  num = random.choice(numbers)
+  if not num in lotto
+    lotto.append(num)
+
+print(lotto)
