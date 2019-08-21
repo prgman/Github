@@ -72,5 +72,5 @@ print("가중치 배열 : \n", weight_list, "\n")
 number_even = random.sample(numbers,6)
 sorted(number_even)
 
-numbers_weighted = random.choices(numbers, weight = weight_list, k=6)
+numbers_weighted = random.choices(numbers, weights = weight_list, k=6)
 sorted(numbers_weighted))
