@@ -1,0 +1,67 @@
+https://yoonemong.tistory.com/183
+
+
+우리는 이클립스에서 .java 파일을 만들고 실행시키면 자동으로 결과값을 보여주기 때문에 편하게 사용만하고 있지만 
+
+실무에서는 .java 파일을 이클립스가 아닌 환경에서 실행해야하는 경우가 많이 있다. 
+
+오늘은 .java 파일을 이클립스가 아닌 직접 실행하는방법에 대해 포스팅하겠습니다.
+
+
+* 일반적인 방법
+
+
+1. C 드라이브에 Main.java 파일을 생성
+
+
+2. 명령 프롬프트 창에서 컴파일과 실행
+
+컴파일: javac Main.java
+
+=> Main.class 파일생성됨
+
+실행:java Main
+
+
+
+* package가 있을때(package Test.Now; 있다고 가정)
+
+1. Main.java 자바 파일에 package Test.Now; 를 추가함
+
+2. 파일에 package가 있다면 Main.java 파일을 컴파일한 Main.class는 그 경로에 존재해야하며 
+
+   .class 파일을 실행시키기위해선 package 경로가 붙어야한다. (java Test.Now.Main)
+
+
+javac -d . Main.java
+
+=> 현재 디렉토리(.)에 Main.java의 package 경로(디렉토리)를 만들어줘!! 의미!!
+
+
+
+Main.java 파일에 package Test.Now;  추가한후 javac Main.java 를 하면 Main.class가 나오기 때문에 java Main을 실행시키면 잘 되겠거니 하겠지만
+
+java Main을 실행시켜보면 오류가 발생하는데 왜 발생할까요? 두가지 이유가 있습니다.
+
+1. class 파일이 package의 경로에 존재하지 않는다.
+
+2. class 파일을 실행시키기 위해선 package의 경로를 적어줘야 한다. 
+
+
+
+* package + 다른 경로의 디렉토리에 존재할 경우
+
+
+
+c 드라이브에 TestTemp 폴더안에 Main.class의 경로(디렉토리)가 있다고 가정하고
+
+현재 디렉토리는 C 드라이브라고 한다면
+
+java Main를 실행시킬수 없다. 다른 경로에 존재한다고 설정을 해줘야한다.
+
+
+
+java -cp(classpath) c:\TestTemp Test.Now.Main 하면 실행잘된다.
+
+=> c:\TestTemp 경로에 존재하는 Test.Now.Main 을 실행할꺼야~~ 라는 의미입니다.
+
